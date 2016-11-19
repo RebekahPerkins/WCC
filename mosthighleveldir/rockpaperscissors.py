@@ -7,16 +7,8 @@ import random
 # Valid moves include 'rock', 'paper', or 'scissors'`
 #
 def check_move(move):
-    is_valid = False
-    if move == 'rock':
-        is_valid = True
-    elif move == 'paper':
-        is_valid = True
-    elif move == 'scissors':
-        is_valid = True
+    return move == 'rock' or move == 'scissors' or move == 'paper'
     
-    return is_valid
-
 # Parameters: None
 # Returns: String of 'rock', 'paper', or scissors'
 # Prompts the user for a move
