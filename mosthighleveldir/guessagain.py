@@ -39,21 +39,22 @@ def compare(numA, numB):
         return 'low'
 
 # main function
-# Param: none
+# Param: low and high limits
 # Returns: String result
-def play():
-    secret_number = random.randint(1,100)
+def play(lowNum, highNum):
+    secret_number = random.randint(lowNum, highNum)
     
     print('number is ' + str(secret_number))
     
-    print('\nI\'m thinking of a number between 1 and 100, what do you think it is?')
+    print('\nI\'m thinking of a number between ' + str(lowNum) + ' and ' + str(highNum) + ', what do you think it is?')
     
     guess = int(get_guess())
-    
+    count = 1
     while guess != secret_number:
         print('Too ' + compare(guess, secret_number) + '. Guess again.')
         guess = int(get_guess())
-        
+        count = count + 1
     print('You got it! Secret number was ' + str(secret_number))
+    print('It took you ' + str(count) + ' guesses.')
     
-play() 
+play(1,10)
