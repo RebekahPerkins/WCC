@@ -32,8 +32,6 @@ def compare(numA, numB):
 def play(lowNum, highNum):
     secret_number = random.randint(lowNum, highNum)
     max_guess = 5
-    
-    print('number is ' + str(secret_number))
 
     print('\nI\'m thinking of a number between ' + str(lowNum) + ' and ' + str(highNum) + ', what do you think it is?')
     
@@ -54,4 +52,4 @@ def play(lowNum, highNum):
         print('You have ' + str(max_guess - guess_count) + ' guesses left.')
         guess = int(get_guess())
         
-play(1,10)
+play(1,50)
